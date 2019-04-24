@@ -1,0 +1,32 @@
+<div class='card'>
+  <div class='card-header'>
+    Kino
+  </div>
+  <div class='card-body'>
+    <div class='row'>
+      <div class='col-md-4'>
+      </div>
+    </div>
+    <div class='row'>
+    </div>
+    <div class='table-responsive'>
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th>Nazwa</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let movie of movies'>
+            <td colspan="2"> {{ movie.name  | titlecase}}</td>
+            <td><a [routerLink]="['/edit', movie.movieId]"><input type="submit" class="btn btn-success" value="Edytuj"></a></td>
+            <td><a><input type="submit" class="btn btn-danger" value='Usuń' (click)="deleteMovie(movie.movieId)"></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

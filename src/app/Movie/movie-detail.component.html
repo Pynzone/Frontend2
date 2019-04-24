@@ -1,0 +1,54 @@
+<div class='card text-white bg-dark mb-3" style="max-width: 18rem;' >
+  <div class='card-header'>
+    {{ pageTitle + ': ' + movie.name}}
+  </div>
+  <div class="panel-body">
+      <div class='col-md-4'>
+          <a> <img class='center-block img-responsive'
+           [style.width.px]='450'
+           [style.margin.px]='2'
+           [src]='movie.imgURL'
+           [title]='movie.name'></a>
+         </div>
+      <div class="row">
+          <div class="col-md-2">Typ: </div>
+          <div class="col-md-10">{{ movie.type }}</div>
+      </div>
+      <div class="row">
+          <div class="col-md-2">Czas trwania: </div>
+          <div class="col-md-10">{{ movie.duration}} min</div>
+      </div>
+      <div class="row">
+          <div class="col-md-2">Kategoria wiekowa: </div>
+          <div class="col-md-10">{{ movie.ageCategory}}</div>
+      </div>
+      <div class="row">
+          <div class="col-md-2">Premiera: </div>
+          <div class="col-md-10">{{ movie.premiere | date: 'dd-MM-yy'  }}(Polska)</div>
+      </div>
+      <div class="row">
+          <div class="col-md-2">Scenariusz: </div>
+          <div class="col-md-10">{{ movie.scenario }}</div>
+      </div>
+      <div class="row">
+          <div class="col-md-2">Obsada: </div>
+          <div class="col-md-10">{{ movie.cast}}</div>
+      </div>
+      <div class="row">
+          <div class="col-md-2">Reżsyeria: </div>
+          <div class="col-md-10">{{ movie.direction }}</div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">Opis: </div>
+        <div class="col-sm-5">{{movie.dyscryption}}</div>
+      </div>
+  </div>
+
+  <div class='card-footer'>
+    <button class='btn btn-outline-secondary'
+    (click)='onBack()'
+    style='width: 80;'>
+    <i class=' fa fa-chevron-left'></i>Powrót
+    </button>
+  </div>
+

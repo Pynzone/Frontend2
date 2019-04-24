@@ -1,0 +1,66 @@
+<div class="col-lg-5">
+  <div class="well bs-component">
+    <form #addMovieForm="ngForm" (ngSubmit)="saveMovie(addMovieForm.value)" class="form-horizontal">
+      <fieldset>
+        <legend>Dodaj Film</legend>
+        <div class="form-group">
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="inputName" placeholder="Nazwa" name="name" ngModel>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="inputAge_category" placeholder="Wiek" name="age_category" ngModel>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="inputCast" placeholder="Obsada" name="cast" ngModel>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="inputDirection" placeholder="Reżyseria" name="duration" ngModel>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-8">
+            <input type="number" class="form-control" id="inputDuration" placeholder="Czas Trwania" name="duration" ngModel>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-8">
+            <textarea id="inputDyscryption" class="form-control" placeholder="Opis Filmu" name="dyscryption" ngModel></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-8">
+            <input type="date" class="form-control" id="inputPremiere" placeholder="Premiera" name="premiere" ngModel>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="inputScenario" placeholder="Scenariusz" name="scenario" ngModel>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="inputType" placeholder="Typ Filmu" name="type" ngModel>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="inputImgUrl" placeholder="link do obrazka" name="imgUrl" ngModel>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-8 col-lg-offset-3">
+            <button  type="submit" class="btn btn-primary">Dodaj</button>
+            <button class='btn btn-outline-secondary'(click)='onBack()'> Powrót</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
+

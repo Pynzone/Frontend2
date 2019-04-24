@@ -1,0 +1,74 @@
+<div class="col-lg-5">
+  <div class="well bs-component">
+    <form class="form-horizontal">
+      <fieldset>
+        <legend>Edytuj Film</legend>
+        <div class="form-group">
+          <label for="inputName" class="col-lg-3 control-label">Nazwa</label>
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="inputName" placeholder="Nazwa" [(ngModel)]="selectedMovie && selectedMovie.name" name="name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputType" class="col-lg-3 control-label">Typ</label>
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="inputType" placeholder="Typ" [(ngModel)]="selectedMovie && selectedMovie.type" name="type">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputDuration" class="col-lg-3 control-label">Czas Trwania</label>
+          <div class="col-lg-8">
+            <input type="number" class="form-control" id="inputDuration" placeholder="Czas Trwania" [(ngModel)]="selectedMovie && selectedMovie.duration" name="duration">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAge_Category" class="col-lg-3 control-label">Kategoria Wiekowa</label>
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="inputAge_Category" placeholder="Kategoria Wiekowa" [(ngModel)]="selectedMovie && selectedMovie.ageCategory" name="age_category">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPremire" class="col-lg-3 control-label">Premiera</label>
+          <div class="col-lg-8">
+            <input type="date" class="form-control" id="inputName" placeholder="Nazwa" [(ngModel)]="selectedMovie && selectedMovie.premiere" name="premire">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputScenario" class="col-lg-3 control-label">Scenariusz</label>
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="inputScenario" placeholder="Scenariusz" [(ngModel)]="selectedMovie && selectedMovie.scenario" name="scenrio">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputDirection" class="col-lg-3 control-label">Reżyseria</label>
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="inputDirection" placeholder="Reżyseria" [(ngModel)]="selectedMovie && selectedMovie.direction" name="direcrtion">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputCast" class="col-lg-3 control-label">Obsada</label>
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="inputCast" placeholder="Obsada" [(ngModel)]="selectedMovie && selectedMovie.cast" name="cast">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputDescryption" class="col-lg-3 control-label">Opis</label>
+          <div class="col-lg-8">
+            <textarea class="form-control" id="inputDescryption" placeholder="Nazwa" [(ngModel)]="selectedMovie && selectedMovie.dyscryption" name="dyscryption"></textarea>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputImgUrl" class="col-lg-3 control-label">imgUrl</label>
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="inputImgUrl" placeholder="imgURL" [(ngModel)]="selectedMovie && selectedMovie.imgURL" name="imgURL">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-lg-8 col-lg-offset-3">
+            <button type="button" class="btn btn-primary"  (click)="saveChanges()" (click)='onBack()'>Zapisz</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
